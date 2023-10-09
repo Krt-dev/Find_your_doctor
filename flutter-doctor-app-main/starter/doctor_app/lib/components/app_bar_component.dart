@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppBarComponent extends StatelessWidget {
   const AppBarComponent({Key? key}) : super(key: key);
@@ -29,6 +30,17 @@ class AppBarComponent extends StatelessWidget {
             )
           ],
         ),
+        const Row(
+          children: [
+            Text(
+              "Find",
+            ),
+            Text(
+              "your doctor",
+              style: TextStyle(fontSize: 100, fontWeight: FontWeight.w400),
+            )
+          ],
+        )
       ],
     );
   }
