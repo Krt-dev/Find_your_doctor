@@ -17,29 +17,40 @@ class AppBarComponent extends StatelessWidget {
               width: 24,
               decoration: const BoxDecoration(
                   image: DecorationImage(
+                      fit: BoxFit.cover,
                       image: Svg('assets/svg/icon-burger.svg'))),
             ),
             Container(
               margin: const EdgeInsets.only(left: 260, top: 62),
-              height: 36,
-              width: 36,
+              height: 40,
+              width: 40,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(5),
+                image: const DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage('assets/svg/profile.png')),
               ),
-              child: Image.asset('assets/svg/profile.png'),
             )
           ],
         ),
-        const Row(
-          children: [
-            Text(
-              "Find",
-            ),
-            Text(
-              "your doctor",
-              style: TextStyle(fontSize: 100, fontWeight: FontWeight.w400),
-            )
-          ],
+        Padding(
+          padding: const EdgeInsets.only(left: 24, top: 20),
+          child: Row(
+            children: [
+              Text(
+                "Find",
+                style:
+                    GoogleFonts.lato(fontSize: 34, fontWeight: FontWeight.w400),
+              ),
+              Text(
+                " your doctor",
+                style: GoogleFonts.lato(
+                    fontSize: 34,
+                    fontWeight: FontWeight.w400,
+                    color: const Color.fromRGBO(160, 164, 168, 1)),
+              )
+            ],
+          ),
         )
       ],
     );
