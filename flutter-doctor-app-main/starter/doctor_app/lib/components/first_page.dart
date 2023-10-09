@@ -17,7 +17,12 @@ class _MyFirstPageState extends State<MyFirstPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: AppBarComponent(),
+      body: Column(
+        children: [
+          AppBarComponent(),
+          SearchBar(),
+        ],
+      ),
     );
   }
 }
