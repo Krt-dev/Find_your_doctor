@@ -16,11 +16,8 @@ class MyFirstPage extends StatefulWidget {
 class _MyFirstPageState extends State<MyFirstPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: Image.asset('assets/images/svg/icon-burger.svg'),
-        //mao ni
-      ),
+    return const Scaffold(
+      body: AppBarComponent(),
     );
   }
 }
