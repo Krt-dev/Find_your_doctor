@@ -19,6 +19,7 @@ class _MyFirstPageState extends State<MyFirstPage> {
     return Scaffold(
       appBar: AppBar(
         leading: Image.asset('assets/images/svg/icon-burger.svg'),
+        //mao ni
       ),
     );
   }
