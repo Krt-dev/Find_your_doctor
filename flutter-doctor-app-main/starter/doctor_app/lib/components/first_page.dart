@@ -43,7 +43,7 @@ class _MyFirstPageState extends State<MyFirstPage> {
             ],
           ),
         ),
-        const TopDoctorsList(),
+        const SizedBox(width: 400, height:500, child: TopDoctorsList()),
       ]
       ),
     );

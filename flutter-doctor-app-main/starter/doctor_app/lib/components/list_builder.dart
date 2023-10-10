@@ -4,6 +4,8 @@ import 'package:flutter_doctor_app/components/doctor_tab.dart';
 
 import 'package:flutter_doctor_app/models/doctor.dart';
 
+import 'second_page.dart';
+
 class TopDoctorsList extends StatelessWidget {
   const TopDoctorsList({Key? key}) : super(key: key);
 
@@ -15,17 +17,7 @@ class TopDoctorsList extends StatelessWidget {
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
-            Navigator.of(context).pushNamed('/doctor_details', arguments: Doctor(
-              doctorName: topDoctors[index].doctorName,
-              doctorDescription: topDoctors[index].doctorDescription,
-              doctorHospital: topDoctors[index].doctorHospital,
-              doctorIsOpen: topDoctors[index].doctorIsOpen,
-              doctorNumberOfPatient: topDoctors[index].doctorNumberOfPatient,
-              doctorPicture: topDoctors[index].doctorPicture,
-              doctorRating: topDoctors[index].doctorRating,
-              doctorSpecialty: topDoctors[index].doctorSpecialty,
-              doctorYearOfExperience: topDoctors[index].doctorYearOfExperience,
-            ),);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondPage()));
           },
           child: DoctorsTab(
             doctor: topDoctors[index],

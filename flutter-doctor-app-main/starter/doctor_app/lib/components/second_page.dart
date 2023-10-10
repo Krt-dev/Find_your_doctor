@@ -4,28 +4,52 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 
-class SecondPage extends StatelessWidget {
+class SecondPage extends StatefulWidget {
   const SecondPage({Key? key}) : super(key: key);
 
+  @override
+  State<SecondPage> createState() => _SecondPageState();
+}
+
+class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        title: Row(
-          children: [
-            Container(
-               height: 24,
-               width: 24,
-               decoration: const BoxDecoration(
-               image: DecorationImage(
-               image: Svg('assets/svg/icon-back.svg'),
+        leading: IconButton(
+    icon:  Container(
+                 height: 24,
+                 width: 24,
+                 decoration: const BoxDecoration(
+                 image: DecorationImage(
+                 image: Svg('assets/svg/icon-back.svg'),
+                ),
+               )
               ),
-             )
-            ),
-          ],
-        ),
+    onPressed: () => Navigator.of(context).pop(),
+  ), 
+        elevation: 0.0,
+        // title:
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.start,
+        //   children: [
+        //     InkWell(
+        //       onTap: () {
+        //         Navigator.pop(context);
+        //       },
+        //       child: Container(
+        //          height: 24,
+        //          width: 24,
+        //          decoration: const BoxDecoration(
+        //          image: DecorationImage(
+        //          image: Svg('assets/svg/icon-back.svg'),
+        //         ),
+        //        )
+        //       ),
+        //     ),
+        //   ],
+        // ),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
