@@ -19,13 +19,33 @@ class MyFirstPage extends StatefulWidget {
 class _MyFirstPageState extends State<MyFirstPage> {
   @override
   Widget build(BuildContext context) {
-    return const Column(children: [
-      AppBarComponent(),
-      Padding(
-        padding: EdgeInsets.only(top: 24),
-        child: Material(child: SearchingBar()),
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(children: [
+        const AppBarComponent(),
+        const Padding(
+          padding: EdgeInsets.only(top: 24),
+          child: Material(child: SearchingBar()),
+        ),
+        const GridIcons(),
+        Padding(
+          padding: const EdgeInsets.only(left: 24),
+          child: Row(
+            children: [
+              Text("Top Doctors",
+              style: GoogleFonts.lato(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left:193.0, top: 10),
+                child: Text("View all",
+                style: GoogleFonts.lato(fontSize: 11, fontWeight: FontWeight.bold, color: const Color(0xff4485FD)),),
+              )
+            ],
+          ),
+        ),
+        const TopDoctorsList(),
+      ]
       ),
-      GridIcons(),
-    ]);
+    );
   }
 }

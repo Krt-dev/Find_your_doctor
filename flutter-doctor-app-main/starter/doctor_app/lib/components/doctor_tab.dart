@@ -5,6 +5,7 @@ import 'package:flutter_doctor_app/constants.dart';
 import 'package:flutter_doctor_app/models/doctor.dart';
 
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DoctorsTab extends StatelessWidget {
   const DoctorsTab({Key? key, this.doctor}) : super(key: key);
@@ -14,7 +15,7 @@ class DoctorsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.only(bottom: 16, top: 10),
       child: Container(
         color: Colors.transparent,
         height: 80,
@@ -55,7 +56,7 @@ class DoctorsTab extends StatelessWidget {
                         doctor!.doctorName,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
-                        style: Theme.of(context).textTheme.headlineMedium,
+                        style: GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.bold,color: const Color(0xff404345)),
                       ),
                     ),
                   ),
@@ -63,42 +64,44 @@ class DoctorsTab extends StatelessWidget {
                     '${doctor!.doctorSpecialty} • ${doctor!.doctorHospital}',
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    style: GoogleFonts.sourceSans3(fontSize: 14,color: const Color(0xffAAAAAA)),
                   ),
-                  const Spacer(),
                   SizedBox(
                     width: MediaQuery.of(context).size.width - 136,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
-                          children: [
-                            RatingBar.builder(
-                              itemSize: 16,
-                              initialRating: double.parse(
-                                doctor!.doctorRating,
+                        Padding(
+                          padding: const EdgeInsets.only(top:10),
+                          child: Row(
+                            children: [
+                              RatingBar.builder(
+                                itemSize: 16,
+                                initialRating: double.parse(
+                                  doctor!.doctorRating,
+                                ),
+                                minRating: 1,
+                                direction: Axis.horizontal,
+                                itemCount: 5,
+                                itemPadding: EdgeInsets.zero,
+                                itemBuilder: (context, _) => const Icon(
+                                  Icons.star,
+                                  color: kYellowColor,
+                                ),
+                                onRatingUpdate: (rating) {
+                                  debugPrint(rating.toString());
+                                },
+                                unratedColor: kGreyColor600,
                               ),
-                              minRating: 1,
-                              direction: Axis.horizontal,
-                              itemCount: 5,
-                              itemPadding: EdgeInsets.zero,
-                              itemBuilder: (context, _) => const Icon(
-                                Icons.star,
-                                color: kYellowColor,
+                              const SizedBox(
+                                width: 4,
                               ),
-                              onRatingUpdate: (rating) {
-                                debugPrint(rating.toString());
-                              },
-                              unratedColor: kGreyColor600,
-                            ),
-                            const SizedBox(
-                              width: 4,
-                            ),
-                            Text(
-                              '(${doctor!.doctorNumberOfPatient})',
-                              style: Theme.of(context).textTheme.bodyMedium,
-                            ),
-                          ],
+                              Text(
+                                '(${doctor!.doctorNumberOfPatient})',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                            ],
+                          ),
                         ),
                         Container(
                           height: 24,
@@ -115,7 +118,7 @@ class DoctorsTab extends StatelessWidget {
                           child: Text(
                             doctor!.doctorIsOpen ? 'Open' : 'Close',
                             style:
-                                Theme.of(context).textTheme.titleLarge!.copyWith(
+                                Theme.of(context).textTheme.titleSmall!.copyWith(
                                       color: doctor!.doctorIsOpen
                                           ? kGreenColor
                                           : kRedColor,
