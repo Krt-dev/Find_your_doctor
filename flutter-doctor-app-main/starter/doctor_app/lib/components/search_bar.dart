@@ -6,14 +6,26 @@ class SearchingBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 20,
-      width: 20,
-      decoration: const BoxDecoration(shape: BoxShape.rectangle),
-      child: const TextField(
-          decoration: InputDecoration(
-              border: InputBorder.none,
-              labelText: 'Enter Name',
-              hintText: 'Enter Your Name')),
+      height: 56,
+      width: 327,
+      decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent)),
+      child: Row(
+        children: [
+          const Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: SizedBox(
+              width: 250,
+              child: TextField(
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Search doctor, medecines, etc.",
+                    floatingLabelStyle: TextStyle(fontSize: 14)),
+              ),
+            ),
+          ),
+          Image.asset('assets/svg/Search.png'),
+        ],
+      ),
     );
   }
 }

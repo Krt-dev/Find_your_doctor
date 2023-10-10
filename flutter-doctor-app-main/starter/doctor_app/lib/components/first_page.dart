@@ -16,13 +16,12 @@ class MyFirstPage extends StatefulWidget {
 class _MyFirstPageState extends State<MyFirstPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        children: [
-          AppBarComponent(),
-          SearchBar(),
-        ],
+    return const Column(children: [
+      AppBarComponent(),
+      Padding(
+        padding: EdgeInsets.only(top: 24),
+        child: Material(child: SearchingBar()),
       ),
-    );
+    ]);
   }
 }
