@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SearchingBar extends StatelessWidget {
   const SearchingBar({Key? key}) : super(key: key);
@@ -6,14 +7,36 @@ class SearchingBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 20,
-      width: 20,
-      decoration: const BoxDecoration(shape: BoxShape.rectangle),
-      child: const TextField(
-          decoration: InputDecoration(
-              border: InputBorder.none,
-              labelText: 'Enter Name',
-              hintText: 'Enter Your Name')),
+      height: 56,
+      width: 327,
+      decoration: BoxDecoration(
+          color: const Color.fromRGBO(246, 246, 246, 1),
+          borderRadius: BorderRadius.circular(8)),
+      child: Row(
+        children: [
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
+            child: SizedBox(
+              width: 250,
+              child: TextField(
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  hintText: "Search doctor, medecines, etc.",
+                  hintStyle: TextStyle(fontSize: 14),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Image.asset(
+              'assets/svg/Search.png',
+              height: 24,
+              width: 24,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

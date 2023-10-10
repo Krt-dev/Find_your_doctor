@@ -39,8 +39,10 @@ class AppBarComponent extends StatelessWidget {
             children: [
               Text(
                 "Find",
-                style:
-                    GoogleFonts.lato(fontSize: 34, fontWeight: FontWeight.w400),
+                style: GoogleFonts.lato(
+                    fontSize: 34,
+                    fontWeight: FontWeight.w400,
+                    color: const Color.fromRGBO(37, 40, 43, 1)),
               ),
               Text(
                 " your doctor",
