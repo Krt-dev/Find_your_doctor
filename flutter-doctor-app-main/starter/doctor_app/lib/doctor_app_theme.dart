@@ -33,7 +33,7 @@ class DoctorAppTheme {
         headline5: TextStyle(
           color: kGreyColor800,
           fontSize: 14,
-          fontFamily: GoogleFonts.sourceSansPro().fontFamily,
+          fontFamily: GoogleFonts.lato().fontFamily,
           fontWeight: FontWeight.w400,
         ),
         headline6: const TextStyle(

@@ -7,7 +7,8 @@ class Doctor {
       this.doctorNumberOfPatient = '',
       this.doctorYearOfExperience = '',
       this.doctorDescription = '',
-      this.doctorPicture = ''});
+      this.doctorPicture = '',
+      this.doctorIsOpen = false});
 
   String doctorName;
   String doctorSpecialty;
@@ -17,6 +18,7 @@ class Doctor {
   String doctorYearOfExperience;
   String doctorDescription;
   String doctorPicture;
+  bool doctorIsOpen;
 }
 
 var topDoctors = [
@@ -30,6 +32,7 @@ var topDoctors = [
     doctorDescription:
         'is one of the best doctors in the Persahabat Hospital. He has saved more than 1000 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
     doctorPicture: 'img-men-01.png',
+    doctorIsOpen: true
   ),
   Doctor(
     doctorName: 'dr. Shabil Chan',
@@ -41,6 +44,7 @@ var topDoctors = [
     doctorDescription:
         'is one of the best doctors in the Columbia Asia Hospital. He has saved more than 900 patients in the past 4 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
     doctorPicture: 'img-women-01.png',
+    doctorIsOpen: true
   ),
   Doctor(
     doctorName: 'dr. Mustakim',
@@ -52,6 +56,7 @@ var topDoctors = [
     doctorDescription:
         'is one of the best doctors in the Salemba Carolus Hospital. He has saved more than 700 patients in the past 5 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
     doctorPicture: 'img-men-02.png',
+    doctorIsOpen: true
   ),
   Doctor(
     doctorName: 'dr. Suprihatini',
@@ -63,6 +68,7 @@ var topDoctors = [
     doctorDescription:
         'is one of the best doctors in the Salemba Carolus Hospital. He has saved more than 1400 patients in the past 6 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
     doctorPicture: 'img-women-02.png',
+    doctorIsOpen: true
   ),
   Doctor(
     doctorName: 'dr. Robert Posy',
@@ -74,6 +80,7 @@ var topDoctors = [
     doctorDescription:
         'is one of the best doctors in the Kariadi Carolus Hospital. He has saved more than 500 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
     doctorPicture: 'img-men-03.png',
+    doctorIsOpen: true
   ),
   Doctor(
     doctorName: 'dr. Matilde Hani',
@@ -85,6 +92,7 @@ var topDoctors = [
     doctorDescription:
         'is one of the best doctors in the Wiloso Hospital. He has saved more than 800 patients in the past 4 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
     doctorPicture: 'img-women-03.png',
+    doctorIsOpen: true
   ),
 ];
 
