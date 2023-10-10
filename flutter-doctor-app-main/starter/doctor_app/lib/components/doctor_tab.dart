@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_doctor_app/constants.dart';
+
 import 'package:flutter_doctor_app/models/doctor.dart';
+
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class TopDoctorsCard extends StatelessWidget {
-  const TopDoctorsCard({Key? key, this.doctor}) : super(key: key);
+class DoctorsTab extends StatelessWidget {
+  const DoctorsTab({Key? key, this.doctor}) : super(key: key);
 
   final Doctor? doctor;
 
